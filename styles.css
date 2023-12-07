@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 3rem;
+  font-family: sans-serif;
+  background-image: url("https://marketplace.canva.com/EAFHyccmd3I/1/0/1600w/canva-brown-and-green-illustration-desktop-wallpaper-uFoN-4UuMEk.jpg");
+}
+
+input {
+  padding: 0.7rem;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  margin: 1rem 0 1rem 0;
+}
+
+input:focus {
+  outline: 2px solid black;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+label {
+  font-size: 18px;
+}
+
+.container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background: #da8d3a;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 5rem;
+  -webkit-box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.form-footer input {
+  width: 50%;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 5rem;
+  background: #00634e;
+  width: 500px;
+  height: 200px;
+  border: 4px solid white;
+  padding: 2rem;
+  color: white;
+  font-size: 20px;
+  -webkit-box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: hidden;
+  }
+}
