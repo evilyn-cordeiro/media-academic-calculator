@@ -5,8 +5,6 @@ body {
   gap: 3rem;
   font-family: sans-serif;
   background-image: url("https://marketplace.canva.com/EAFHyccmd3I/1/0/1600w/canva-brown-and-green-illustration-desktop-wallpaper-uFoN-4UuMEk.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 input {
