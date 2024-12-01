@@ -1,27 +1,38 @@
+/* Estilo do corpo da página */
 body {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  gap: 3rem;
-  font-family: sans-serif;
-  background-image: url("https://marketplace.canva.com/EAFHyccmd3I/1/0/1600w/canva-brown-and-green-illustration-desktop-wallpaper-uFoN-4UuMEk.jpg");
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  padding-top: 5rem;
+  margin: 0;
+  background-image: url("https://cdn.pixabay.com/photo/2016/08/05/16/43/background-1572602_1280.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 input {
-  padding: 0.7rem;
+  padding: 0.8rem;
   font-size: 16px;
-  border-radius: 4px;
-  border: none;
-  margin: 1rem 0 1rem 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin: 1rem 0;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
 }
 
+/* Foco nos inputs */
 input:focus {
-  outline: 2px solid black;
+  outline: none;
+  border-color: #0077cc;
+  background-color: #eef8ff;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
@@ -29,54 +40,123 @@ input[type="number"] {
 
 label {
   font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: red;
 }
 
 .container {
-  width: 500px;
+  width: 100%;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
-  background: #da8d3a;
+  background-color: #ffffff;
   padding: 25px;
-  border-radius: 8px;
-  margin-top: 5rem;
-  -webkit-box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .form-footer {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .form-footer input {
-  width: 50%;
+  width: 48%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #0077cc;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.form-footer input:hover {
+  background-color: #005fa3;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 100px;
+  text-align: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal p {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+}
+
+.close {
+  color: #aaa;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
   cursor: pointer;
 }
 
-.result {
-  margin-top: 5rem;
-  background: #00634e;
-  width: 500px;
-  height: 200px;
-  border: 4px solid white;
-  padding: 2rem;
-  color: white;
-  border-radius: 8px;
-  font-size: 20px;
-  -webkit-box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 3px 59px -15px rgba(0, 0, 0, 0.75);
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.info-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #0077cc;
+}
+
+.info-tooltip {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: -10px;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.info-icon:hover .info-tooltip {
+  display: block;
 }
 
 @media screen and (max-width: 1000px) {
   body {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    overflow-x: hidden;
     padding: 1rem;
   }
 
@@ -84,7 +164,7 @@ label {
     width: 90%;
   }
 
-  .result {
+  .modal-content {
     width: 90%;
   }
 }

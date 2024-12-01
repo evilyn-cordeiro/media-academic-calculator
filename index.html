@@ -8,29 +8,51 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Calculadora de Média | UNIFAPCE</title>
+
+    <!-- Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <form class="container">
-        <label for="avp1">Nota AVP1</label>
-        <input type="number" id="avp1" name="avp1" step="0.010">
-        <label for="avp2">Nota AVP2</label>
-        <input type="number" id="avp2" step="0.010">
+    <form class="container" id="form">
+        <label for="avp1">Nota AVP1 <span class="required">*</span></label>
+        <input type="number" id="avp1" name="avp1" step="0.010" required>
+
+        <label for="avp2">Nota AVP2 <span class="required">*</span></label>
+        <input type="number" id="avp2" name="avp2" step="0.010" required>
+
         <!-- TDES -->
-        <label for="tde1">Nota TDE1</label>
-        <input type="number" id="tde1" name="tde1" step="0.010">
-        <label for=" tde2">Nota TDE2</label>
-        <input type="number" id="tde2" name="tde2" step="0.010">
-        <label for=" tde3">Nota TDE3</label>
-        <input type="number" id="tde3" name="tde3" step="0.010">
-        <label for=" tde4">Nota TDE4</label>
-        <input type="number" id="tde4" step="0.010">
-        <div class=" form-footer">
+        <label for="tde1">Nota TDE1 <span class="required">*</span></label>
+        <input type="number" id="tde1" name="tde1" step="0.010" required>
+
+        <label for="tde2">Nota TDE2 <span class="required">*</span></label>
+        <input type="number" id="tde2" name="tde2" step="0.010" required>
+
+        <label for="tde3">Nota TDE3 <span class="required">*</span></label>
+        <input type="number" id="tde3" name="tde3" step="0.010" required>
+
+        <label for="tde4">Nota TDE4 <span class="required">*</span></label>
+        <input type="number" id="tde4" name="tde4" step="0.010" required>
+
+        <div class="form-footer">
             <input type="reset" value="Limpar">
             <input type="submit" value="Calcular">
         </div>
+
+        <!-- Ícone de Informativo -->
+        <div class="info-icon">
+            <i class="fas fa-info-circle"></i>
+            <div class="info-tooltip">As médias calculadas não incluem Projetos Integradores ou disciplinas EAD.</div>
+        </div>
     </form>
-    <div class="result">Informe suas notas no formulário ao lado!</div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="close">&times;</span>
+            <p id="result">Informe suas notas no formulário ao lado!</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
