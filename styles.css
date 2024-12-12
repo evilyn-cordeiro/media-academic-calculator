@@ -155,8 +155,10 @@ label {
   display: block;
 }
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
+  margin-top: 2rem;
+  text-align: center;
   padding: 1rem;
 }
 
