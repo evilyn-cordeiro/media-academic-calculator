@@ -154,6 +154,11 @@ label {
 .info-icon:hover .info-tooltip {
   display: block;
 }
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+}
 
 @media screen and (max-width: 1000px) {
   body {
