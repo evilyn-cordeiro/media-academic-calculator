@@ -1,8 +1,6 @@
 /* Estilo do corpo da página */
 body {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   padding-top: 2rem;
@@ -10,14 +8,61 @@ body {
   background-image: url("/9019808.jpg");
   background-size: cover;
   background-position: center;
+  color: #333;
+}
+
+/* Título do formulário */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #004271;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* Centralização do formulário */
+.box-center {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Formulário */
+.container {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Explicação adicional sobre o formulário */
+.container p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo do formulário (labels e inputs) */
+label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
 }
 
 input {
-  padding: 0.8rem;
-  font-size: 16px;
-  border-radius: 6px;
+  padding: 0.4rem;
+  font-size: 14px;
+  border-radius: 4px;
   border: 1px solid #ccc;
-  margin: 1rem 0;
+  margin: 0.4rem 0;
   background-color: #f9f9f9;
   transition: all 0.3s ease;
 }
@@ -38,38 +83,18 @@ input[type="number"] {
   appearance: textfield;
 }
 
-label {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.required {
-  color: red;
-}
-
-.container {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
+/* Rodapé do formulário */
 .form-footer {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .form-footer input {
   width: 48%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
   border: none;
   cursor: pointer;
   background-color: #004271;
@@ -77,16 +102,21 @@ label {
   transition: all 0.3s ease;
 }
 
+.form-footer :nth-child(1) {
+  background: none;
+  border: 1px solid #004271;
+  color: #003359;
+}
+
+.form-footer :nth-child(1):hover {
+  background: none;
+}
+
 .form-footer input:hover {
-  background-color: #004271;
+  background-color: #003359;
 }
 
-.close:hover,
-.close:focus {
-  color: #333;
-  text-decoration: none;
-}
-
+/* Estilo do ícone de informações */
 .info-icon {
   position: absolute;
   top: 10px;
@@ -115,7 +145,7 @@ label {
   display: block;
 }
 
-/* Modal */
+/* Modal de resultado */
 .modal {
   display: none;
   position: fixed;
@@ -137,7 +167,6 @@ label {
   border-radius: 8px;
   width: 50%;
   text-align: center;
-  position: relative;
 }
 
 /* Cores para o resultado */
@@ -180,10 +209,10 @@ label {
   cursor: pointer;
 }
 
+/* Rodapé da página */
 footer {
-  position: relative;
+  position: static;
   bottom: 0;
-  margin-top: 1rem;
   text-align: center;
   padding: 0.5rem;
   font-size: 12px;
@@ -191,12 +220,8 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-  body {
-    padding: 1rem;
-  }
-
   .container {
-    width: 90%;
+    width: 80%;
   }
 
   .modal-content {

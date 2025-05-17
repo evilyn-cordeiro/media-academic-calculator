@@ -12,35 +12,42 @@
 </head>
 
 <body>
-    <form class="container" id="form">
-        <label for="avp1">Nota AVP1 <span class="required">*</span></label>
-        <input type="number" id="avp1" name="avp1" step="0.010" required>
+    <div class="box-center">
+        <form class="container" id="form">
+            <h1>Simulador de Média Acadêmica</h1>
+            <p>Preencha as notas abaixo para calcular sua média final. As médias não incluem Projetos Integradores ou
+                disciplinas EAD.</p>
 
-        <label for="avp2">Nota AVP2 <span class="required">*</span></label>
-        <input type="number" id="avp2" name="avp2" step="0.010" required>
+            <label for="avp1">Nota AVP1 <span class="required">*</span></label>
+            <input type="number" id="avp1" name="avp1" step="0.010" required>
 
-        <label for="tde1">Nota TDE1 <span class="required">*</span></label>
-        <input type="number" id="tde1" name="tde1" step="0.010" required>
+            <label for="avp2">Nota AVP2 <span class="required">*</span></label>
+            <input type="number" id="avp2" name="avp2" step="0.010" required>
 
-        <label for="tde2">Nota TDE2 <span class="required">*</span></label>
-        <input type="number" id="tde2" name="tde2" step="0.010" required>
+            <label for="tde1">Nota TDE1 <span class="required">*</span></label>
+            <input type="number" id="tde1" name="tde1" step="0.010" required>
 
-        <label for="tde3">Nota TDE3 <span class="required">*</span></label>
-        <input type="number" id="tde3" name="tde3" step="0.010" required>
+            <label for="tde2">Nota TDE2 <span class="required">*</span></label>
+            <input type="number" id="tde2" name="tde2" step="0.010" required>
 
-        <label for="tde4">Nota TDE4 <span class="required">*</span></label>
-        <input type="number" id="tde4" name="tde4" step="0.010" required>
+            <label for="tde3">Nota TDE3 <span class="required">*</span></label>
+            <input type="number" id="tde3" name="tde3" step="0.010" required>
 
-        <div class="form-footer">
-            <input type="reset" value="Limpar">
-            <input type="submit" value="Calcular">
-        </div>
+            <label for="tde4">Nota TDE4 <span class="required">*</span></label>
+            <input type="number" id="tde4" name="tde4" step="0.010" required>
 
-        <div class="info-icon">
-            <i class="fas fa-info-circle"></i>
-            <div class="info-tooltip">As médias calculadas não incluem Projetos Integradores ou disciplinas EAD.</div>
-        </div>
-    </form>
+            <div class="form-footer">
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Calcular">
+            </div>
+
+            <div class="info-icon">
+                <i class="fas fa-info-circle"></i>
+                <div class="info-tooltip">As médias calculadas não incluem Projetos Integradores ou disciplinas EAD.
+                </div>
+            </div>
+        </form>
+    </div>
 
     <!-- Modal de resultado -->
     <div class="modal" id="modal">
@@ -53,6 +60,3 @@
 
     <footer>© Desenvolvido por Evilyn Cordeiro | Base para Cálculos - Centro Universitário Paraíso, 2025.</footer>
     <script src="script.js"></script>
-</body>
-
-</html>
