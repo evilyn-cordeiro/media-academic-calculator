@@ -5,9 +5,9 @@ body {
   justify-content: center;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
-  padding-top: 5rem;
+  padding-top: 2rem;
   margin: 0;
-  background-image: url("https://cdn.pixabay.com/photo/2016/08/05/16/43/background-1572602_1280.jpg");
+  background-image: url("/9019808.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -25,7 +25,7 @@ input {
 /* Foco nos inputs */
 input:focus {
   outline: none;
-  border-color: #0077cc;
+  border-color: #004271;
   background-color: #eef8ff;
 }
 
@@ -50,12 +50,12 @@ label {
 
 .container {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 8px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -63,7 +63,6 @@ label {
 .form-footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
 }
 
 .form-footer input {
@@ -73,52 +72,13 @@ label {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: #0077cc;
+  background-color: #004271;
   color: white;
   transition: all 0.3s ease;
 }
 
 .form-footer input:hover {
-  background-color: #005fa3;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding-top: 100px;
-  text-align: center;
-}
-
-.modal-content {
-  background-color: #ffffff;
-  margin: auto;
-  padding: 25px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.modal p {
-  font-size: 22px;
-  color: #333;
-  margin: 0;
-}
-
-.close {
-  color: #aaa;
-  font-size: 32px;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
+  background-color: #004271;
 }
 
 .close:hover,
@@ -133,7 +93,7 @@ label {
   right: 10px;
   cursor: pointer;
   font-size: 24px;
-  color: #0077cc;
+  color: #004271;
 }
 
 .info-tooltip {
@@ -154,12 +114,80 @@ label {
 .info-icon:hover .info-tooltip {
   display: block;
 }
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 100px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  max-width: 350px;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+/* Cores para o resultado */
+.modal.aprovado .modal-content {
+  border: 3px solid green;
+  background-color: #e7f7e7;
+}
+
+.modal.reprovado .modal-content {
+  border: 3px solid red;
+  background-color: #f7e7e7;
+}
+
+.modal.avf .modal-content {
+  border: 3px solid orange;
+  background-color: #fff4e1;
+}
+
+/* Estilo do gif */
+.gif {
+  margin-top: 20px;
+  max-width: 200px;
+}
+
+/* Botão de fechar */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 footer {
   position: relative;
   bottom: 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
+  font-size: 12px;
+  color: #c7c7c7;
 }
 
 @media screen and (max-width: 1000px) {
@@ -172,6 +200,6 @@ footer {
   }
 
   .modal-content {
-    width: 90%;
+    width: 70%;
   }
 }
